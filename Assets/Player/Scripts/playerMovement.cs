@@ -9,12 +9,11 @@ public class playerMovement : MonoBehaviour
     Transform playerContainer, cameraContainer;
 
     public float speed = 3.0f;
-    public float jumpSpeed = 8f;
+    public float jumpSpeed = 3f;
     public float mouseSensitivity = 2f;
-    public float gravity = 10.0f;
+    public float gravity = 1.6f; //moon gravity
     public float lookUpClamp = -30f;
     public float lookDawnClamp = 60;
-    //public float fallSpeed = 2f;
 
     private Vector3 moveDirection = Vector3.zero;
     float rotateX, rotateY;
@@ -62,7 +61,7 @@ public class playerMovement : MonoBehaviour
                 moveDirection.y = jumpSpeed;
             }
 
-            if (Input.GetKey(KeyCode.C))
+           /* if (Input.GetKey(KeyCode.C))
             {
                 characterController.height = 0.65f;
                 characterController.center = new Vector3(0f, 0.5f, 0f);
@@ -71,7 +70,7 @@ public class playerMovement : MonoBehaviour
             {
                 characterController.height = 2f;
                 characterController.center = new Vector3(0f, 1f, 0f);
-            }
+            } */
 
         }
 
