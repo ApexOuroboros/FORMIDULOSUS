@@ -1,31 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class enemyMovement : MonoBehaviour
 {
-    public GameObject enemy; //enemy movement
     public GameObject player; //what the enemy will follow
 
     public float speed;
 
 
     // Update is called once per frame
-    void Update()
+    void Start()
     {
-        transform.
+        player = GameObject.FindGameObjectWithTag("Player"); //find the player
     }
 
-    void OnTriggerEnter(Collider collider)
+    //move towards the player when not rendered
+    //enemy moves at set speed
+    private void OnBecomeInvisible()
     {
-        if (collider.gameObject.tag == "Player")
-            speed = 0f;
-    }
-
-    void OnTriggerExit(Collider collider)
-    {
-        if(collider.gameObject.tag == "Player")
-            speed = 2f;
+        transform.position += (player.transform.position - player.transform.forward) * speed * Time.deltaTime;
     }
 
 }
