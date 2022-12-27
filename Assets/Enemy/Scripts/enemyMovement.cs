@@ -21,6 +21,7 @@ public class enemyMovement : MonoBehaviour
     private void OnBecomeInvisible()
     {
         transform.position += (player.transform.position - player.transform.forward) * speed * Time.deltaTime;
+        //add something else, enemy isnt moving
     }
 
 }
