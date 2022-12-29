@@ -20,7 +20,7 @@ public class enemyMovement : MonoBehaviour
     //enemy moves at set speed
     private void OnBecomeInvisible()
     {
-        transform.position += (player.transform.position - player.transform.forward) * speed * Time.deltaTime;
+        transform.position = player.transform.position - player.transform.forward;
         //add something else, enemy isnt moving
     }
 
