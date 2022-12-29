@@ -404,7 +404,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7069089341480620175, guid: 01f47fdf907d25c46883bdfeb589a7af, type: 3}
   m_PrefabInstance: {fileID: 3629637066161102849}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1471006331
+--- !u!114 &1471006333
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -416,8 +416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89574d023d2db6748bbc559027ba4d84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1883472563}
-  speed: 20
+  Player: {fileID: 1883472572}
 --- !u!1 &1883472563 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4265692052753516369, guid: 4925acaa5d23c0643ab35c36b5624d61, type: 3}
@@ -439,6 +438,11 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!4 &1883472572 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6302596456868213132, guid: 4925acaa5d23c0643ab35c36b5624d61, type: 3}
+  m_PrefabInstance: {fileID: 2646105281696745596}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2066271159 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8873862762801016916, guid: a4898ecd3d0f0e04c919d81792dd07df, type: 3}
