@@ -28,12 +28,12 @@ public class enemyMovement : MonoBehaviour
     void OnBecomeVisible()
     {
         enabled = false;
-        Debug.Log("not moving");
+        
     }
 
     void OnBecomeInvisible()
     {
-        Debug.Log("moving");
+        
 
         transform.LookAt(Player);
 
