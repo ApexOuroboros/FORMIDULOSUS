@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Security.Cryptography;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,26 +16,13 @@ public class enemyMovement : MonoBehaviour
     // Update is called once per frame
     void Start()
     {
-        OnBecomeVisible();
+        
     }
 
     //move towards the player when not rendered
     //enemy moves at set speed
     void Update()
     {
-       
-    }
-
-    void OnBecomeVisible()
-    {
-        enabled = false;
-        
-    }
-
-    void OnBecomeInvisible()
-    {
-        
-
         transform.LookAt(Player);
 
         if (Vector3.Distance(transform.position, Player.position) >= minDist)
@@ -42,6 +30,11 @@ public class enemyMovement : MonoBehaviour
 
             transform.position += transform.forward * speed * Time.deltaTime;
         }
+
     }
+
+    //isVisible not supported on this version
+    //cant make enemy stop moving when looked at without Raycast
+    //OnBecomeInvisable not working 
 
 }
