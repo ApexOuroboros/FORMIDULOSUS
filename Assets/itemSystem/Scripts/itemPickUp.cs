@@ -6,12 +6,19 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class itemPickUp : MonoBehaviour
 {
-    private Rigidbody rb;
-    public Rigidbody Rb => rb;
+    public Transform hand;
 
-    private void Awake()
+    void OnMouseDown()
     {
-        rb = GetComponent<Rigidbody>();
+        GetComponent<Rigidbody>().useGravity = false;
+        this.transform.position = hand.position;
+        this.transform.parent = GameObject.Find("Hand").transform;
+    }
+
+    void OnMouseUp()
+    {
+        this.transform.parent = null;
+        GetComponent<Rigidbody>().useGravity = true;
     }
 
 }
