@@ -1,8 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Security.Cryptography;
-using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,6 +8,7 @@ public class enemyMovement : MonoBehaviour
     public Transform Player;
     int speed = 1; //scary fast if speed 4
     int minDist = 1;
+    public float gravity = 2f; //enemy should be less floaty than the player
 
 
     // Update is called once per frame
@@ -19,8 +17,9 @@ public class enemyMovement : MonoBehaviour
         
     }
 
-    //move towards the player when not rendered
-    //enemy moves at set speed
+   
+    //enemy moves at set speed towards the player
+    //enemy is always following the player's position
     void Update()
     {
         transform.LookAt(Player);

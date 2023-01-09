@@ -22,7 +22,7 @@ public class playerMovement : MonoBehaviour
     void Start()
     {
 
-        Cursor.visible = false;
+        Cursor.visible = true;
         characterController = GetComponent<CharacterController>();
         SetCurrentCamera();
 
@@ -60,17 +60,6 @@ public class playerMovement : MonoBehaviour
             {
                 moveDirection.y = jumpSpeed;
             }
-
-           /* if (Input.GetKey(KeyCode.C))
-            {
-                characterController.height = 0.65f;
-                characterController.center = new Vector3(0f, 0.5f, 0f);
-            }
-            else if (Input.GetKey(KeyCode.C))
-            {
-                characterController.height = 2f;
-                characterController.center = new Vector3(0f, 1f, 0f);
-            } */
 
         }
 

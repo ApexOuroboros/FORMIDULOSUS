@@ -10,5 +10,5 @@ public class finishGame : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
-
+    //when player collides with the space ship, they will be taken back to the main menu
 }

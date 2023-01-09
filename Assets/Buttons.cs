@@ -10,10 +10,11 @@ public class Buttons : MonoBehaviour
     {
         SceneManager.LoadScene("GameScene");
     }
+    //load game when "start" button is pressed
 
     public void quitGame()
     {
         Application.Quit();
     }
-
+    //quit when "quit" button is pressed
 }
